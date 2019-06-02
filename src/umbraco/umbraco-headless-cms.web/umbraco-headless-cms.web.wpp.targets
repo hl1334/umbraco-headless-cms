@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Define empty directories that need to be added to web deploy package-->
+  <ItemGroup>
+    <EmptyDirectories Include="media"/>
+    <EmptyDirectories Include="App_Data"/>
+    <EmptyDirectories Include="App_Data\TEMP"/>
+    <EmptyDirectories Include="App_Data\TEMP\ExamineIndexes"/>
+    <EmptyDirectories Include="App_Data\Logs"/>
+    <EmptyDirectories Include="App_Data\preview"/>
+  </ItemGroup>
+  <!--Create empty directories in the web deploy package-->
+  <Target Name="CreateEmptyDirectories" AfterTargets="CopyAllFilesToSingleFolderForPackage;CopyAllFilesToSingleFolderForMsdeploy">
+    <Message Text="Creating empty directories in package" Importance="high"/>
+    <Message Text="%(EmptyDirectories.Identity)" Importance="high"/>
+    <MakeDir Directories="$(_MSDeployDirPath_FullPath)\%(EmptyDirectories.Identity)"/>
+  </Target>
+
+  <!--Add the build version to web.config-->
+  <PropertyGroup>
+    <BuildVersion/>
+  </PropertyGroup>
+  <Target Name="AddVersionToConfig" AfterTargets="CopyAllFilesToSingleFolderForPackage;CopyAllFilesToSingleFolderForMsdeploy" Condition=" '$(BuildVersion)' != '' ">
+    <Message Text="Adding version to web.config" Importance="high"/>
+    <Exec Command="powershell.exe -command &quot;&amp; ..\..\..\tools\Add-Appsetting.ps1 -key BuildVersion -value $(BuildVersion) -file_path $(_MSDeployDirPath_FullPath)\web.config &quot;"/>
+  </Target>
+</Project>

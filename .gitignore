@@ -1,0 +1,9 @@
+# tools/NuGet/
+!tools
+!tools/Nuget/
+!tools/Nuget/nuget.exe
+tools/packages/
+build/
+node_modules/
+npm-debug.log
+coverage/

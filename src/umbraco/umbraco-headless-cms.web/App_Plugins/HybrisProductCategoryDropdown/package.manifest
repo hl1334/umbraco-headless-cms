@@ -1,0 +1,16 @@
+﻿{
+  propertyEditors: [
+    {
+      alias: "HybrisProductCategoryDropdown",
+      name: "Hybris product category dropdown list",
+      editor: {
+        view: "~/App_Plugins/HybrisProductCategoryDropdown/hybrisproductcategorydropdown.html",
+        valueType: "JSON"
+      }
+    }
+  ],
+  javascript: [
+    "~/App_Plugins/HybrisProductCategoryDropdown/hybrisproductcategorydropdown.resource.js",
+    "~/App_Plugins/HybrisProductCategoryDropdown/hybrisproductcategorydropdown.controller.js",
+  ]
+}

@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: Occasions
+  version: 1.0.0
+servers:
+  - url: https://ds-umbraco-headless-cms-test.azurewebsites.net/v1
+paths:
+  /occasions:
+    get:
+      summary: List all occasions
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occasion'
+
+components:
+  schemas:
+    Occasion:
+      type: object
+      properties:
+        hybrisProductCategory:
+          type: string
+          description:  | 
+            A hybris category the occasion should be mapped to.
+            This field will be an empty string if no hybris category is selected.
+          example: valentines
+        icon:
+          type: string
+          description: |
+            An icon that represents the occasion.
+            This field will be an empty string if no icon is selected.
+          example: valentine
+        date:
+          type: string
+          format: date-time ISO-8601
+          description: |
+            Date representing when the occasion is.
+            This field will be an empty string if no date is selected.
+          example: "2017-09-14T00:00:00"
+        id:
+          type: string
+          description: The key the node has in Umbraco.
+          example: f8e07b42-ed98-41b5-8a01-478c1870004b
+        name:
+          type: string
+          description: The name of the occasion.
+          example: Valentine
+        type:
+          type: string
+          description: What type the node is in Umbraco.
+          example: occasion

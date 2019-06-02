@@ -1,0 +1,12 @@
+﻿<div ng-controller="HybrisProductCategoryDropdown">
+    <span ng-if="error">
+        {{ errorMessage }}
+    </span>
+    <select id="hybrisProductCategoryDropdown"
+            class="umb-editor umb-dropdown"
+            ng-if="!error"
+            ng-model="model.selectedHybrisProductCategory"
+            ng-change="hybrisProductCategoryChange()">
+        <option ng-repeat="hybrisProductCategory in hybrisProductCategories">{{ hybrisProductCategory }}</option>
+    </select>
+</div>

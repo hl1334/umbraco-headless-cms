@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umbraco-headless-cms.web", "umbraco-headless-cms.web\umbraco-headless-cms.web.csproj", "{BA3D7259-1FE0-4E85-B782-9A7C41FA7B37}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F4116FCE-FE7E-45ED-B893-034C8DD5E879} = {F4116FCE-FE7E-45ED-B893-034C8DD5E879}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umbraco-headless-cms.library", "umbraco-headless-cms.library\umbraco-headless-cms.library.csproj", "{F4116FCE-FE7E-45ED-B893-034C8DD5E879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umbraco-headless-cms.tests", "umbraco-headless-cms.tests\umbraco-headless-cms.tests.csproj", "{FEB35107-F14F-4F24-9E67-7963D7699A93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA3D7259-1FE0-4E85-B782-9A7C41FA7B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3D7259-1FE0-4E85-B782-9A7C41FA7B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3D7259-1FE0-4E85-B782-9A7C41FA7B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3D7259-1FE0-4E85-B782-9A7C41FA7B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4116FCE-FE7E-45ED-B893-034C8DD5E879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4116FCE-FE7E-45ED-B893-034C8DD5E879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4116FCE-FE7E-45ED-B893-034C8DD5E879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4116FCE-FE7E-45ED-B893-034C8DD5E879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB35107-F14F-4F24-9E67-7963D7699A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB35107-F14F-4F24-9E67-7963D7699A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB35107-F14F-4F24-9E67-7963D7699A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB35107-F14F-4F24-9E67-7963D7699A93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

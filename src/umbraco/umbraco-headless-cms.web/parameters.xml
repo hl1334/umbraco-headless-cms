@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <!--Media files blob storage-->
+  <parameter name="FileSystemProvidersConfigName">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/umbracoConfiguration/FileSystemProviders/@configSource" />
+  </parameter>
+
+  <!--Imgix config-->
+  <!--config\imgix\imgix.dev.config-->
+  <parameter name="ImgixConfig" defaultValue="config\imgix\imgix.dev.config">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/imgix/@configSource" />
+  </parameter>
+  
+  <!-- Log4Net config -->
+  <parameter name="Log4NetConfig" defaultValue="config\log4net\log4net.dev.config">
+    <parameterEntry kind="XmlFile" scope="\\web.config$" match="/configuration/log4net/@configSource" />
+  </parameter>
+
+</parameters>

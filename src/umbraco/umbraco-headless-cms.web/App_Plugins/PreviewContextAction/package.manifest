@@ -1,0 +1,14 @@
+﻿{
+  propertyEditors: [
+    {
+      alias: "PreviewContextAction",
+      name: "Preview page content context action",
+      editor: {
+        view: "~/App_Plugins/PreviewContextAction/previewcontextaction.html"
+      }
+    }
+  ],
+  javascript: [
+    "~/App_Plugins/PreviewContextAction/previewcontextaction.controller.js"
+  ]
+}

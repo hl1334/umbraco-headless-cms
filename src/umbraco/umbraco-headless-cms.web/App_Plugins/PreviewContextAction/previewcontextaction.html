@@ -1,0 +1,20 @@
+﻿<div ng-controller="PreviewContextAction">
+    <div class="umb-dialog-body form-horizontal">
+        <div class="umb-pane">
+            <div class="control-group">
+                <p class="alert-info">{{pageName}}</p>
+            </div>
+            <umb-property property="previewDate.model">
+                <umb-editor model="previewDate.model"></umb-editor>
+            </umb-property>
+        </div>
+    </div>
+    <div class="umb-dialog-footer btn-toolbar umb-btn-toolbar">
+        <a class="btn color-green" ng-click="openPreviewWindow()">
+            Preview
+        </a>
+        <a class="btn btn-link" ng-click="nav.hideDialog()">
+            <localize key="general_cancel">Cancel</localize>
+        </a>
+    </div>
+</div>
